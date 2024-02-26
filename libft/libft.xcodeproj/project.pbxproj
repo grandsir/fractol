@@ -1,0 +1,148 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXFileReference section */
+		3C1CFCA92B8BC99500F34D6C /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		3C1CFCAA2B8BC99500F34D6C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		3C1CFCAB2B8BC99500F34D6C /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libft.a; sourceTree = "<group>"; };
+		3C1CFCAC2B8BC99500F34D6C /* includes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = includes; sourceTree = "<group>"; };
+		3C1CFCAD2B8BC99500F34D6C /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = objects; sourceTree = "<group>"; };
+		3C1CFCAE2B8BC99500F34D6C /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3C1CFCA32B8BC99500F34D6C = {
+			isa = PBXGroup;
+			children = (
+				3C1CFCA92B8BC99500F34D6C /* .DS_Store */,
+				3C1CFCAA2B8BC99500F34D6C /* Makefile */,
+				3C1CFCAB2B8BC99500F34D6C /* libft.a */,
+				3C1CFCAC2B8BC99500F34D6C /* includes */,
+				3C1CFCAD2B8BC99500F34D6C /* objects */,
+				3C1CFCAE2B8BC99500F34D6C /* src */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		3C1CFCA82B8BC99500F34D6C /* libft */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 3C1CFCAF2B8BC99500F34D6C /* Build configuration list for PBXLegacyTarget "libft" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/grandsir/Downloads/benim_fractol/libft;
+			dependencies = (
+			);
+			name = libft;
+			passBuildSettingsInEnvironment = 1;
+			productName = libft;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		3C1CFCA42B8BC99500F34D6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+			};
+			buildConfigurationList = 3C1CFCA72B8BC99500F34D6C /* Build configuration list for PBXProject "libft" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C1CFCA32B8BC99500F34D6C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C1CFCA82B8BC99500F34D6C /* libft */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		3C1CFCA52B8BC99500F34D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		3C1CFCA62B8BC99500F34D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		3C1CFCB02B8BC99500F34D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = libft;
+			};
+			name = Debug;
+		};
+		3C1CFCB12B8BC99500F34D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = libft;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C1CFCA72B8BC99500F34D6C /* Build configuration list for PBXProject "libft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1CFCA52B8BC99500F34D6C /* Debug */,
+				3C1CFCA62B8BC99500F34D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C1CFCAF2B8BC99500F34D6C /* Build configuration list for PBXLegacyTarget "libft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1CFCB02B8BC99500F34D6C /* Debug */,
+				3C1CFCB12B8BC99500F34D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C1CFCA42B8BC99500F34D6C /* Project object */;
+}

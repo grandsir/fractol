@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXFileReference section */
+		3C1CFCB82B8BC99500F34D6C /* man */ = {isa = PBXFileReference; lastKnownFileType = folder; path = man; sourceTree = "<group>"; };
+		3C1CFCB92B8BC99500F34D6C /* mlx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mlx.h; sourceTree = "<group>"; };
+		3C1CFCBA2B8BC99500F34D6C /* mlx_rgb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mlx_rgb.c; sourceTree = "<group>"; };
+		3C1CFCBB2B8BC99500F34D6C /* libmlx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmlx.a; sourceTree = "<group>"; };
+		3C1CFCBC2B8BC99500F34D6C /* mlx_shaders.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mlx_shaders.o; sourceTree = "<group>"; };
+		3C1CFCBD2B8BC99500F34D6C /* mlx_int_str_to_wordtab.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mlx_int_str_to_wordtab.c; sourceTree = "<group>"; };
+		3C1CFCBE2B8BC99500F34D6C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		3C1CFCBF2B8BC99500F34D6C /* mlx_init_loop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mlx_init_loop.m; sourceTree = "<group>"; };
+		3C1CFCC02B8BC99500F34D6C /* font.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = font.c; sourceTree = "<group>"; };
+		3C1CFCC12B8BC99500F34D6C /* mlx_new_image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mlx_new_image.m; sourceTree = "<group>"; };
+		3C1CFCC22B8BC99500F34D6C /* mlx_new_window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mlx_new_window.m; sourceTree = "<group>"; };
+		3C1CFCC32B8BC99500F34D6C /* mlx_xpm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mlx_xpm.c; sourceTree = "<group>"; };
+		3C1CFCC42B8BC99500F34D6C /* font.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.xcf; sourceTree = "<group>"; };
+		3C1CFCC52B8BC99500F34D6C /* mlx_shaders.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mlx_shaders.c; sourceTree = "<group>"; };
+		3C1CFCC62B8BC99500F34D6C /* mlx_int_str_to_wordtab.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mlx_int_str_to_wordtab.o; sourceTree = "<group>"; };
+		3C1CFCC72B8BC99500F34D6C /* mlx_init_loop.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mlx_init_loop.o; sourceTree = "<group>"; };
+		3C1CFCC82B8BC99500F34D6C /* mlx_xpm.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mlx_xpm.o; sourceTree = "<group>"; };
+		3C1CFCC92B8BC99500F34D6C /* mlx_int.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mlx_int.h; sourceTree = "<group>"; };
+		3C1CFCCA2B8BC99500F34D6C /* mlx_new_window.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mlx_new_window.o; sourceTree = "<group>"; };
+		3C1CFCCB2B8BC99500F34D6C /* mlx_new_window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mlx_new_window.h; sourceTree = "<group>"; };
+		3C1CFCCC2B8BC99500F34D6C /* mlx_new_image.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mlx_new_image.o; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3C1CFCB22B8BC99500F34D6C = {
+			isa = PBXGroup;
+			children = (
+				3C1CFCB82B8BC99500F34D6C /* man */,
+				3C1CFCB92B8BC99500F34D6C /* mlx.h */,
+				3C1CFCBA2B8BC99500F34D6C /* mlx_rgb.c */,
+				3C1CFCBB2B8BC99500F34D6C /* libmlx.a */,
+				3C1CFCBC2B8BC99500F34D6C /* mlx_shaders.o */,
+				3C1CFCBD2B8BC99500F34D6C /* mlx_int_str_to_wordtab.c */,
+				3C1CFCBE2B8BC99500F34D6C /* Makefile */,
+				3C1CFCBF2B8BC99500F34D6C /* mlx_init_loop.m */,
+				3C1CFCC02B8BC99500F34D6C /* font.c */,
+				3C1CFCC12B8BC99500F34D6C /* mlx_new_image.m */,
+				3C1CFCC22B8BC99500F34D6C /* mlx_new_window.m */,
+				3C1CFCC32B8BC99500F34D6C /* mlx_xpm.c */,
+				3C1CFCC42B8BC99500F34D6C /* font.xcf */,
+				3C1CFCC52B8BC99500F34D6C /* mlx_shaders.c */,
+				3C1CFCC62B8BC99500F34D6C /* mlx_int_str_to_wordtab.o */,
+				3C1CFCC72B8BC99500F34D6C /* mlx_init_loop.o */,
+				3C1CFCC82B8BC99500F34D6C /* mlx_xpm.o */,
+				3C1CFCC92B8BC99500F34D6C /* mlx_int.h */,
+				3C1CFCCA2B8BC99500F34D6C /* mlx_new_window.o */,
+				3C1CFCCB2B8BC99500F34D6C /* mlx_new_window.h */,
+				3C1CFCCC2B8BC99500F34D6C /* mlx_new_image.o */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		3C1CFCB72B8BC99500F34D6C /* minilibx */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 3C1CFCCD2B8BC99500F34D6C /* Build configuration list for PBXLegacyTarget "minilibx" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/grandsir/Downloads/benim_fractol/minilibx;
+			dependencies = (
+			);
+			name = minilibx;
+			passBuildSettingsInEnvironment = 1;
+			productName = minilibx;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		3C1CFCB32B8BC99500F34D6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+			};
+			buildConfigurationList = 3C1CFCB62B8BC99500F34D6C /* Build configuration list for PBXProject "minilibx" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C1CFCB22B8BC99500F34D6C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C1CFCB72B8BC99500F34D6C /* minilibx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		3C1CFCB42B8BC99500F34D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		3C1CFCB52B8BC99500F34D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		3C1CFCCE2B8BC99500F34D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = minilibx;
+			};
+			name = Debug;
+		};
+		3C1CFCCF2B8BC99500F34D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = minilibx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C1CFCB62B8BC99500F34D6C /* Build configuration list for PBXProject "minilibx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1CFCB42B8BC99500F34D6C /* Debug */,
+				3C1CFCB52B8BC99500F34D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C1CFCCD2B8BC99500F34D6C /* Build configuration list for PBXLegacyTarget "minilibx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1CFCCE2B8BC99500F34D6C /* Debug */,
+				3C1CFCCF2B8BC99500F34D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C1CFCB32B8BC99500F34D6C /* Project object */;
+}
