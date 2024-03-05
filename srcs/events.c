@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:58:41 by databey           #+#    #+#             */
-/*   Updated: 2024/02/26 04:41:57 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/05 13:09:29 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int on_mouse_down(int button, int x, int y, t_global *g)
 	}
 	screen_to_world(g, x, y, &mouse_x, &mouse_y);
 	if (button == 4)
-		g->event.world_scale *= 1.1f;
+		g->event.world_scale *= 1.05f;
 	if (button == 5)
-		g->event.world_scale /= 1.1f;
+		g->event.world_scale *= 0.95f;
 	screen_to_world(g, x, y, &mouse_x_scaled, &mouse_y_scaled);
 	g->offset_x += (mouse_x - mouse_x_scaled);
 	g->offset_y += (mouse_y - mouse_y_scaled);
@@ -46,6 +46,8 @@ int on_mouse_up(int button, int x, int y, t_global *g)
 
 int on_mouse_move(int x, int y, t_global *g)
 {
+	g->event.mouse_x = x;
+	g->event.mouse_y = y;
 	if (g->event.mouse_hold)
 	{
 		g->offset_x -= (x - g->event.mouse_pan_x) / g->event.world_scale;

@@ -6,7 +6,7 @@
 #    By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 18:22:11 by databey           #+#    #+#              #
-#    Updated: 2024/02/25 22:13:22 by databey          ###   ########.fr        #
+#    Updated: 2024/03/04 17:18:15 by databey          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME = fractol
 
 # Compiling flags
-FLAGS = -g
+FLAGS = -g -Ofast
 
 # Folders
 SRC_DIR = ./srcs/
@@ -24,7 +24,7 @@ LIBFT_DIR = ./libft/
 MINLBX_DIR = ./minilibx/
 
 # Source files and object files
-SRC_FILES = main.c utils.c helpers.c global.c events.c
+SRC_FILES = main.c utils.c helpers.c global.c events.c mandelbrot.c key.c color.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 # Paths
