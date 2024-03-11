@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:08:18 by databey           #+#    #+#             */
-/*   Updated: 2024/03/05 13:09:02 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:15:15 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ void scale(t_global *g, int x, int y, double scale)
 	int my;
 	int smx;
 	int smy;
-	printf("X: %d\n", x);	
-	printf("Y: %d\n", y);	
 	screen_to_world(g, x, y, &mx, &my);
 	g->event.world_scale *= scale;
 	screen_to_world(g, x, y, &smx, &smy);
@@ -49,6 +47,10 @@ int	setup_keys(int keycode, t_global *g)
 		move(g, (SCREEN_WIDTH / 10), 0);
 	else if (keycode == KEY_P)
 		g->palette += 1;
+	else if (keycode == KEY_C)
+		g->fractal += 1;
+	else if (keycode == KEY_ESCAPE)
+		close_window(g);
 	else
 		return (0);
 	return (1);

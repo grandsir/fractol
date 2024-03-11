@@ -6,7 +6,7 @@
 #    By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 18:22:11 by databey           #+#    #+#              #
-#    Updated: 2024/03/04 17:18:15 by databey          ###   ########.fr        #
+#    Updated: 2024/03/07 14:06:34 by databey          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME = fractol
 
 # Compiling flags
-FLAGS = -g -Ofast
+FLAGS = -g
 
 # Folders
 SRC_DIR = ./srcs/
@@ -58,13 +58,11 @@ clean:
 	@rm -Rf $(OBJ_DIR)
 	@make -C $(LIBFT_DIR) clean
 	@make -C $(MINLBX_DIR) clean
-	@echo "¯\_(ツ)_/¯ Objects removed!"
 
 # fclean rule
 fclean: clean
 	@rm -f $(NAME)
 	@make -C $(LIBFT_DIR) fclean
-	@echo "(╯°□°）╯︵ ┻━┻ $(NAME) removed!"
 
 # re rule
 re: fclean all

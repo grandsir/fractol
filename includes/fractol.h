@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:27:27 by databey           #+#    #+#             */
-/*   Updated: 2024/03/05 13:07:30 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:03:31 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@
 # include "mlx.h"
 # include "actions.h"
 # include "../libft/includes/libft.h"
-# define SCREEN_WIDTH 1280
-# define SCREEN_HEIGHT 720
+# define SCREEN_WIDTH 1280.0f
+# define SCREEN_HEIGHT 720.0f
 # define RE_START -2
 # define RE_END 1
 # define IM_START -1
 # define IM_END 1
-# define MAX_ITER 100
+# define MAX_ITER 25
+# define MANDELBROT 1
+# define JULIA 2
 
 typedef struct	s_data {
 	void	*img;
@@ -52,6 +54,7 @@ typedef struct s_global {
 	void 	*mlx;
 	void	*mlx_win;
 	int		palette;
+	int		fractal;
 	t_data	*img;
 	t_edata event;
 }				t_global;
@@ -59,12 +62,16 @@ typedef struct s_global {
 int		setup_mouse_events(t_global *g);
 int		mandelbrot(double c);
 int		setup_keys(int keycode, t_global *g);
-void	print_mandelbrot(t_global *g);
+int		palette(t_global *g, int m);
+int		f_mandelbrot(t_global *g, double re, double im);
+int		fatal_error(const char *reason);
+void	clear_image_memory(t_global *g);
+void	print_fractal(t_global *g);
+void	close_window(t_global *g);
 void	scale(t_global *g, int x, int y, double scale);
 void	move(t_global *g, int x, int y);
 void	mlx_safe_pixel_put(t_data *data, int x, int y, int color);
 void	setup_global(void *mlx, void *mlx_win, t_global *g);
 void	screen_to_world(t_global *g, int screen_x, int screen_y, int *world_x, int *world_y);
-int		palette(t_global *g, int m);
 void	init_image(t_global *g);
 #endif
