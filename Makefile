@@ -6,8 +6,7 @@
 #    By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 18:22:11 by databey           #+#    #+#              #
-#    Updated: 2024/03/07 14:06:34 by databey          ###   ########.fr        #
-#                                                                              #
+#    Updated: 2024/03/11 13:45:45 by databey   	                                    #
 # **************************************************************************** #
 
 # Name of the program
@@ -24,7 +23,7 @@ LIBFT_DIR = ./libft/
 MINLBX_DIR = ./minilibx/
 
 # Source files and object files
-SRC_FILES = main.c utils.c helpers.c global.c events.c mandelbrot.c key.c color.c
+SRC_FILES = main.c utils.c helpers.c global.c events.c mandelbrot.c key.c color.c fractal.c julia.c init.c 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 # Paths

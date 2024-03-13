@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 18:15:27 by databey           #+#    #+#             */
-/*   Updated: 2023/10/21 16:15:13 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/11 13:31:59 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= 48 && str[i] <= 57)
 		num = num * 10 + (str[i++] - 48);
+	if (str[i] != '\0')
+		return (0);
 	return (num * n);
 }

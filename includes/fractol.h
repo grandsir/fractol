@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:27:27 by databey           #+#    #+#             */
-/*   Updated: 2024/03/07 16:03:31 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/13 14:37:32 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # define RE_END 1
 # define IM_START -1
 # define IM_END 1
-# define MAX_ITER 25
+# define MAX_ITER 250
 # define MANDELBROT 1
 # define JULIA 2
 
@@ -51,6 +51,8 @@ typedef struct s_event_data {
 typedef struct s_global {
 	double		offset_x;
 	double		offset_y;
+	double		z_re;
+	double		z_im;
 	void 	*mlx;
 	void	*mlx_win;
 	int		palette;
@@ -64,7 +66,9 @@ int		mandelbrot(double c);
 int		setup_keys(int keycode, t_global *g);
 int		palette(t_global *g, int m);
 int		f_mandelbrot(t_global *g, double re, double im);
+int		f_julia(t_global *g, double zr, double zi);
 int		fatal_error(const char *reason);
+int		handle_arg(t_global *g, int argc, char *argv[]);
 void	clear_image_memory(t_global *g);
 void	print_fractal(t_global *g);
 void	close_window(t_global *g);

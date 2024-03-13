@@ -5,7 +5,7 @@ ft_isalnum ft_isprint ft_memcpy ft_putendl ft_strchr ft_strlcat ft_strncmp ft_su
 
 BONUS_DOTC = ft_lstnew ft_lstadd_front ft_lstlast ft_lstsize ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
 
-EXTRA_FILES = ft_putchar_len ft_putstr_len ft_putnbr_len ft_log10
+EXTRA_FILES = ft_putchar_len ft_putstr_len ft_putnbr_len ft_log10 ft_atof
 GNL_FILES = get_next_line_utils get_next_line
 PRINTF_FILES = ft_exec_cmd ft_print_hex ft_print_ptr ft_printf ft_putunsigned
 

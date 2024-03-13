@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 08:43:23 by databey           #+#    #+#             */
-/*   Updated: 2024/03/07 15:52:06 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/13 13:51:46 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,18 @@ void clear_image_memory(t_global *g)
     {
         if (g->img)
         {
+            free(g->img);
             if (g->img->addr)
                 free(g->img->addr);
-            free(g->img);
-         }
+        }
     }
+}
+
+int fatal_error(const char *str) {
+    ft_printf("\e[0;31mFatal Error: ");
+    ft_printf(str);
+    ft_printf("\n\e[0;37m");
+    return (1);
 }
 
 void close_window(t_global *g)

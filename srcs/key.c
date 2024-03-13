@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:08:18 by databey           #+#    #+#             */
-/*   Updated: 2024/03/07 16:15:15 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/13 17:17:14 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,14 @@ int	setup_keys(int keycode, t_global *g)
 		move(g, (SCREEN_WIDTH / 10), 0);
 	else if (keycode == KEY_P)
 		g->palette += 1;
+	else if (keycode == KEY_Z)
+		g->z_re -= 0.05;
+	else if (keycode == KEY_X)
+		g->z_re += 0.05;
 	else if (keycode == KEY_C)
-		g->fractal += 1;
+		g->z_im -= 0.05;
+	else if (keycode == KEY_V)
+		g->z_im += 0.05;
 	else if (keycode == KEY_ESCAPE)
 		close_window(g);
 	else
