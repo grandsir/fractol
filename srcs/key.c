@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:08:18 by databey           #+#    #+#             */
-/*   Updated: 2024/03/13 17:17:14 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/14 16:53:02 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ void move(t_global *g, int x, int y)
 
 void scale(t_global *g, int x, int y, double scale)
 {
-	int mx;
-	int my;
-	int smx;
-	int smy;
+	double mx;
+	double my;
+	double smx;
+	double smy;
 	screen_to_world(g, x, y, &mx, &my);
 	g->event.world_scale *= scale;
 	screen_to_world(g, x, y, &smx, &smy);
-	g->offset_x += (mx - smx);
-	g->offset_y += (my - smy);
+	g->offset_x += mx - smx;
+	g->offset_y += my - smy;
 }
 
 int	setup_keys(int keycode, t_global *g)

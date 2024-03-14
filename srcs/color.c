@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:12:59 by databey           #+#    #+#             */
-/*   Updated: 2024/03/05 12:34:06 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/14 13:59:53 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int rainbow_palette_2(int m) {
     g = (int)((double)255 * ((double)m / MAX_ITER));
     b = (int)((double)255 * ((double)m / MAX_ITER));
 
-    return (r << 16) | (g << 8) | b;
+    return (r << 4) | (g << 4) | b;
 }
 static int	red_palette(int m)
 {

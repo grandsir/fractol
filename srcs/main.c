@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:25:48 by databey           #+#    #+#             */
-/*   Updated: 2024/03/13 13:41:20 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/14 15:55:55 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static int	on_frame_update(t_global *g)
 {
-	// clear_image_memory(g);
 	init_image(g); 
 	mlx_clear_window(g->mlx, g->mlx_win);
 	print_fractal(g);

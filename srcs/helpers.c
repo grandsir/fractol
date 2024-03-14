@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 08:43:23 by databey           #+#    #+#             */
-/*   Updated: 2024/03/13 13:51:46 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/14 16:57:33 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 void clear_image_memory(t_global *g)
 {
-    if (g)
+    if (g->img)
     {
-        if (g->img)
-        {
-            free(g->img);
-            if (g->img->addr)
-                free(g->img->addr);
-        }
+        free(g->img);
+        if (g->img->addr)
+            free(g->img->addr);
     }
 }
 
@@ -39,5 +36,6 @@ void close_window(t_global *g)
     clear_image_memory(g);
     if (g->mlx != NULL)
         free(g->mlx);
+    system("leaks fractol");
     exit(1);
 }

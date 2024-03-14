@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:09:53 by databey           #+#    #+#             */
-/*   Updated: 2024/03/13 16:34:38 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/14 16:21:17 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ int handle_arg(t_global *g, int argc, char *argv[])
 	int second;
 
 	if (argc == 1)
-		return fatal_error("No arguments provided.\nCorrect usage is: ./fractol <Fractal number>\nAvailable fractal numbers:\nn\e[1;36m1- Mandelbrot\n2- Julia");
+		return fatal_error("No arguments provided.\nCorrect usage is: ./fractol <Fractal number>\nAvailable fractal numbers:\nn\e[1;36m1- Mandelbrot\n2- Julia\n3- Burning Ship");
 	if (argc >= 2)
 	{
 		first = ft_atoi(argv[1]);
-		if (!first || first > 2 || first < 0)
-			return fatal_error("Invalid fractal number\nAvailable fractal numbers:\n\e[1;36m1- Mandelbrot\n2- Julia");
+		if (!first || first > 3 || first < 0)
+			return fatal_error("Invalid fractal number\nAvailable fractal numbers:\n\e[1;36m1- Mandelbrot\n2- Julia\n3- Burning Ship");
 		g->fractal = first;
 		if (first == JULIA)
 			return (init_julia(g, argc, argv));
@@ -63,7 +63,7 @@ void init_image(t_global *g)
 {
 	t_data *img;
 
-	clear_image_memory(g);
+	// clear_image_memory(g);
 	img = malloc(sizeof (t_data));
 	img->img = mlx_new_image(g->mlx, SCREEN_WIDTH, SCREEN_HEIGHT);
     img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel, &img->line_length,

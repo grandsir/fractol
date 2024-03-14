@@ -23,7 +23,7 @@ LIBFT_DIR = ./libft/
 MINLBX_DIR = ./minilibx/
 
 # Source files and object files
-SRC_FILES = main.c utils.c helpers.c global.c events.c mandelbrot.c key.c color.c fractal.c julia.c init.c 
+SRC_FILES = main.c utils.c helpers.c global.c events.c mandelbrot.c key.c color.c fractal.c julia.c init.c burning_ship.c 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 # Paths

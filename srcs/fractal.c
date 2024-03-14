@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:15:20 by databey           #+#    #+#             */
-/*   Updated: 2024/03/11 17:38:21 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/14 16:48:14 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	calculate_fractal(t_global *g, double re, double im)
 		iter = f_mandelbrot(g, re, im);
 	else if (g->fractal == JULIA)
 		iter = f_julia(g, re, im);
+	else if (g->fractal == BURNING_SHIP)
+		iter = f_burning_ship(g, re, im);
 	return (iter);
 }
 
@@ -43,9 +45,9 @@ void print_fractal(t_global *g)
 
 			m = calculate_fractal(g, re, im);
 			if (m == MAX_ITER || m < 0) 
-				mlx_safe_pixel_put(g->img, x, y, 0x000000);
+				mlx_safe_pixel_put(g->img, (int)x, (int)y, 0x000000);
 			else 
-				mlx_safe_pixel_put(g->img, x, y, palette(g, m));
+				mlx_safe_pixel_put(g->img, (int) x, (int) y, palette(g, m));
 		}
 	}
 }
