@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:09:53 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 13:47:20 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 14:33:10 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,11 @@ int	handle_arg(t_global *g, int argc, char *argv[])
 
 void	init_image(t_global *g)
 {
-	g->img = mlx_new_image(g->mlx, SCREEN_WIDTH, SCREEN_HEIGHT);
-	if (!g->img)
-	{
-		error("image creation error");
-		close_window(1, g);
-	}
-	g->img->addr = mlx_get_data_addr(g->img, &g->img->bits_per_pixel,
-			&g->img->line_length, &g->img->endian);
+	t_data	*img;
+
+	img = malloc(sizeof(t_data));
+	img->img = mlx_new_image(g->mlx, SCREEN_WIDTH, SCREEN_HEIGHT);
+	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel,
+			&img->line_length, &img->endian);
+	g->img = img;
 }

@@ -6,24 +6,18 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:25:48 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 13:46:45 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 14:27:12 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void clean_init(t_global *g)
-{
-	g->mlx = NULL;
-	g->mlx_win = NULL;
-}
-
 static int	on_frame_update(t_global *g)
 {
-	init_image(g); 
+	init_image(g);
 	mlx_clear_window(g->mlx, g->mlx_win);
 	print_fractal(g);
-	mlx_put_image_to_window(g->mlx, g->mlx_win, g->img, 0, 0);
+	mlx_put_image_to_window(g->mlx, g->mlx_win, g->img->img, 0, 0);
 	return (0);
 }
 
@@ -40,13 +34,10 @@ int	main(int argc, char *argv[])
 	void		*mlx_win;
 	t_global	g;
 
-	clean_init(&g);
 	mlx = mlx_init();
 	if (mlx == NULL)
-	{
 		return (error("Can not initialize MLX"));
-	}
-	mlx_win = mlx_new_window(mlx, SCREEN_WIDTH * 2, SCREEN_HEIGHT * 2, "Fractol");
+	mlx_win = mlx_new_window(mlx, SCREEN_WIDTH, SCREEN_HEIGHT, "Fractol");
 	if (mlx_win == NULL)
 	{
 		free(mlx);

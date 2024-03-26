@@ -6,23 +6,25 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 08:43:23 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 13:13:31 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 14:33:58 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	reinit_image(t_global *g)
+void	clear_image_memory(t_global *g)
 {
-	if (g->mlx && g->img)
-		mlx_destroy_image(g->mlx, g->img);
-	if (g->buf)
-		g->buf = NULL;
-	init_image(g);
+	if (g->img)
+	{
+		free(g->img);
+		if (g->img->addr)
+			free(g->img->addr);
+	}
 }
 
 int	error(const char *str)
 {
+	ft_printf("\e[0;31m");
 	ft_printf(str);
 	ft_printf("\n\e[0;37m");
 	return (1);
