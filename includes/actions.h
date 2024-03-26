@@ -6,12 +6,12 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:08:08 by databey           #+#    #+#             */
-/*   Updated: 2024/03/03 18:08:14 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/25 15:42:31 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MACOS_KEY_H
-# define MACOS_KEY_H
+#ifndef ACTIONS_H
+# define ACTIONS_H
 
 # define KEY_ERROR			-1
 

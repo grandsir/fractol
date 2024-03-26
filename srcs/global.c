@@ -6,13 +6,13 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 08:39:02 by databey           #+#    #+#             */
-/*   Updated: 2024/03/14 16:52:19 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 13:09:10 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void setup_global(void *mlx, void *mlx_win, t_global *g)
+void	setup_global(void *mlx, void *mlx_win, t_global *g)
 {
 	g->mlx = mlx;
 	g->mlx_win = mlx_win;
@@ -25,11 +25,12 @@ void setup_global(void *mlx, void *mlx_win, t_global *g)
 	g->palette = 1;
 	g->z_re = 0.285;
 	g->z_im = 0.01;
+	init_image(g);
 }
 
-void screen_to_world(t_global *g, int screen_x, int screen_y, double *world_x, double *world_y)
+void	screen_to_world(t_global *g, t_point point,
+		double *world_x, double *world_y)
 {
-	*world_x = ((double) screen_x / g->event.world_scale + (g->offset_x));
-	*world_y = ((double) screen_y / g->event.world_scale + (g->offset_y));
+	*world_x = ((double)point.x / g->event.world_scale + (g->offset_x));
+	*world_y = ((double)point.y / g->event.world_scale + (g->offset_y));
 }
-

@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:12:59 by databey           #+#    #+#             */
-/*   Updated: 2024/03/14 13:59:53 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/25 15:35:48 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,23 +30,24 @@ static int	rainbow_palette(int m)
 	int	g;
 	int	b;
 
-    r = (int)((double)200 * ((double)m / MAX_ITER));
-    g = (int)((double)50 * ((double)m / MAX_ITER));
-    b = (int)((double)250 * ((double)m / MAX_ITER));
+	r = (int)((double)200 * ((double)m / MAX_ITER));
+	g = (int)((double)50 * ((double)m / MAX_ITER));
+	b = (int)((double)250 * ((double)m / MAX_ITER));
 	return (r * g * b * m);
 }
 
-static int rainbow_palette_2(int m) {
-    int r;
-    int g;
-    int b;
+static int	rainbow_palette_2(int m)
+{
+	int	r;
+	int	g;
+	int	b;
 
-    r = (int)((double)255 * ((double)m / MAX_ITER));
-    g = (int)((double)255 * ((double)m / MAX_ITER));
-    b = (int)((double)255 * ((double)m / MAX_ITER));
-
-    return (r << 4) | (g << 4) | b;
+	r = (int)((double)255 * ((double)m / MAX_ITER));
+	g = (int)((double)255 * ((double)m / MAX_ITER));
+	b = (int)((double)255 * ((double)m / MAX_ITER));
+	return ((r << 4) | (g << 4) | b);
 }
+
 static int	red_palette(int m)
 {
 	int	r;
@@ -61,16 +62,16 @@ static int	red_palette(int m)
 
 int	palette(t_global *g, int m)
 {
-	int f;
+	int	f;
 
 	f = g->palette % 4;
 	if (f == 0)
-		return purple_palette(m);
+		return (purple_palette(m));
 	if (f == 1)
-		return red_palette(m);
+		return (red_palette(m));
 	if (f == 2)
-		return rainbow_palette(m);
+		return (rainbow_palette(m));
 	if (f == 3)
-		return rainbow_palette_2(m);
+		return (rainbow_palette_2(m));
 	return (0);
 }
