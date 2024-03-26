@@ -6,13 +6,13 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:15:20 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 14:34:25 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 15:17:13 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	calculate_fractal(t_global *g, double re, double im)
+static int	calculate_fractal(t_global *g, double re, double im)
 {
 	int	iter;
 

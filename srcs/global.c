@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 08:39:02 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 14:28:54 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 14:55:54 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	setup_global(void *mlx, void *mlx_win, t_global *g)
 {
+	g->img = NULL;
 	g->mlx = mlx;
 	g->mlx_win = mlx_win;
 	g->offset_x = 0;

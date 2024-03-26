@@ -6,11 +6,17 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:25:48 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 14:27:12 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 15:16:10 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+static int clean_exit(t_global *g)
+{
+	close_window(0, g);
+	return (0);
+}
 
 static int	on_frame_update(t_global *g)
 {
@@ -25,6 +31,7 @@ static void	setup_events(t_global *g)
 {
 	mlx_loop_hook(g->mlx, on_frame_update, g);
 	mlx_key_hook(g->mlx_win, setup_keys, g);
+	mlx_hook(g->mlx_win, 17, 0, clean_exit, g);
 	setup_mouse_events(g);
 }
 

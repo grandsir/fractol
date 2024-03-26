@@ -6,13 +6,13 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:58:41 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 14:34:57 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 15:17:31 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	on_mouse_down(int button, int x, int y, t_global *g)
+static int	on_mouse_down(int button, int x, int y, t_global *g)
 {
 	double	mouse_x;
 	double	mouse_y;
@@ -39,7 +39,7 @@ int	on_mouse_down(int button, int x, int y, t_global *g)
 	return (1);
 }
 
-int	on_mouse_up(int button, int x, int y, t_global *g)
+static int	on_mouse_up(int button, int x, int y, t_global *g)
 {
 	g->event.mouse_hold = 0;
 	g->event.mouse_pan_x = 0;
@@ -47,7 +47,7 @@ int	on_mouse_up(int button, int x, int y, t_global *g)
 	return (1);
 }
 
-int	on_mouse_move(int x, int y, t_global *g)
+static int	on_mouse_move(int x, int y, t_global *g)
 {
 	g->event.mouse_x = x;
 	g->event.mouse_y = y;

@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:09:53 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 14:33:10 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/26 15:16:50 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	check_for_letters(char *str)
 	return (c);
 }
 
-int	init_julia(t_global *g, int argc, char *argv[])
+static int	init_julia(t_global *g, int argc, char *argv[])
 {
 	char	str[50];
 
@@ -74,7 +74,14 @@ void	init_image(t_global *g)
 {
 	t_data	*img;
 
+	if (g->img)
+		clear_image_memory(g);
 	img = malloc(sizeof(t_data));
+	if (!img)
+	{
+		error("Image can not be created");
+		close_window(1, g);
+	}
 	img->img = mlx_new_image(g->mlx, SCREEN_WIDTH, SCREEN_HEIGHT);
 	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel,
 			&img->line_length, &img->endian);
