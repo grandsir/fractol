@@ -6,7 +6,7 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 08:43:23 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 15:24:46 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/27 12:42:02 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ void	close_window(int exit_code, t_global *g)
         clear_image_memory(g);
     if (g->mlx_win && g->mlx)
 		mlx_destroy_window(g->mlx, g->mlx_win);
-    if (g->mlx)
-        free(g->mlx);
 	system("leaks fractol");
 	exit(exit_code);
 }

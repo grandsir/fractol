@@ -6,13 +6,13 @@
 /*   By: databey <databey@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:25:48 by databey           #+#    #+#             */
-/*   Updated: 2024/03/26 15:16:10 by databey          ###   ########.fr       */
+/*   Updated: 2024/03/27 12:32:35 by databey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static int clean_exit(t_global *g)
+static int	clean_exit(t_global *g)
 {
 	close_window(0, g);
 	return (0);
